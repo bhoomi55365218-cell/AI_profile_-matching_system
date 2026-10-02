@@ -29,8 +29,8 @@ import pandas as pd
 
 BASE_DIR = Path(__file__).resolve().parent
 
-users = pd.read_csv(BASE_DIR / "users.csv")
-feedback = pd.read_csv(BASE_DIR / "feedback.csv")
+users = pd.read_csv("users.csv")
+feedback = pd.read_csv("feedback.csv")
 
 try:
     feedback = pd.read_csv(feedback_file)
