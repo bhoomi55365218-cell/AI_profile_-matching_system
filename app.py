@@ -24,9 +24,13 @@ st.set_page_config(
 # LOAD DATA
 # ============================================
 
-users = pd.read_csv("/content/users.csv")
+from pathlib import Path
+import pandas as pd
 
-feedback_file = "/content/feedback.csv"
+BASE_DIR = Path(__file__).resolve().parent
+
+users = pd.read_csv(BASE_DIR / "users.csv")
+feedback = pd.read_csv(BASE_DIR / "feedback.csv")
 
 try:
     feedback = pd.read_csv(feedback_file)
